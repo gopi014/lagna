@@ -10,12 +10,12 @@
   <div class="bg-image">
     <div class="layer">
       <div>
-          <ion-row justify-content-end>
+          <ion-row justify-content-end style="padding-top: 10px;">
               <ion-radio-group [(value)]="lang" (ionChange)="langChange()">
                 <ion-col >
                   <ion-label class="label-text">English</ion-label>
                   <ion-radio value="en" class="radio-hidden"></ion-radio>
-                </ion-col>          
+                </ion-col>
                 <ion-col>
                   <ion-label  class="label-text">தமிழ்</ion-label>
                   <ion-radio value="ta" class="radio-hidden" ></ion-radio>
@@ -28,7 +28,7 @@
       </div>
       <p class='para1'>{{"welcome_name" | translate }}</p>
       <p class='para2'>{{"welcome_event" | translate }}</p>
-      <p class='para3'>{{"welcome_date" | translate }}</p>
+      <p class='para3'[innerHtml]="'welcome_date' | translate"></p>
       <div class='layer2'>
         <img class='imageTwo' src="assets/icon/Group 1.png" />
       </div>
@@ -36,15 +36,14 @@
       <button ion-button full class="buttonTwo" expand="block" [routerLink]="['/invitation',lang]" routerDirection="forward">{{"invitation" | translate }}</button>
       <button ion-button full class="buttonThree">{{"live" | translate }}</button>
       <button ion-button full class="buttonFour" [routerLink]="['/directions',lang]" routerDirection="forward">{{"direction" | translate }}</button>
-
     </div>
   </div>
 
   <!-- <h2>{{"home" | translate }}</h2>
-  <p> 
+  <p>
    {{ "about" | translate }}
   </p>
-  <p> 
+  <p>
    {{"welcome" | translate }}
   </p>
         <button ion-button color="secondary" (click)="langChange()">Secondary</button> -->

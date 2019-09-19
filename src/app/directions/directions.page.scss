@@ -1,13 +1,15 @@
 .layer{
     height: 100%;
-    background-color: rgba(205, 62, 92,0.5);
+    background-color: rgba(0, 0, 20, 0.6);
 }
 .bg-image {
     height: 100%;
     width: 100%;
     background: url('../../assets/images/gopi.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-position: 55% 50%;
+    background-size: cover;
+    opacity: 0.9;
 }
 .header{
     --background: #AF273F !important;
@@ -18,28 +20,29 @@
     font-size: 20px;
     font-weight: bold;
     color:#fff;
-    font-family: myFirstFont;
+    font-family: sf;
+
 }
 .para1{
     margin: 0px !important;
     font-size: 18px;
     color:#fff;
-    font-weight: bold;
-    font-family: myFirstFont;
+    font-family: sf;
 }
 .para2{
         margin: 0px !important;
         font-size: 16px;
         color:#fff;
-        font-family: myFirstFont;
+        font-family: sf;
+        opacity: 0.9;
 }
 .navigate{
     background: blue !important;
-    font-size: 16px;
+    font-size: 18px;
     color: white;
     padding: 10px;
-    margin-top: 4px;
-    font-family: myFirstFont;
+    margin-top: 10px;
+    font-family: sf;
 
 }
 .list{
@@ -48,3 +51,22 @@
 .icon{
      vertical-align: text-top;
 }
+.card{
+    width:100%;
+    margin: 3px !important;
+    border: 0.2px solid #fff !important;
+}
+.card-header{
+    border-bottom:1px solid #737373;
+}
+
+@font-face {
+    font-family: sf;
+    src: url('../../assets/Fonts/SourceSerifPro-Regular.ttf');
+  }
+  @font-face {
+    font-family: yan;
+    src: url('../../assets/Fonts/YanoneKaffeesatz-Regular.ttf');
+  }
+
+

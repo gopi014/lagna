@@ -15,6 +15,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
  import { Calendar } from '@ionic-native/calendar/ngx';
  import { Toast } from '@ionic-native/toast/ngx';
+ import { LaunchNavigator } from '@ionic-native/launch-navigator/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -32,9 +33,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     SplashScreen,
      Calendar,
      Toast,
+     LaunchNavigator,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule {}
 export function setTranslateLoader(http: HttpClient) {

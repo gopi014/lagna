@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Events } from '@ionic/angular';
 import { Calendar } from '@ionic-native/calendar/ngx';
 import { Toast } from '@ionic-native/toast/ngx';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -9,11 +10,15 @@ import { Toast } from '@ionic-native/toast/ngx';
 })
 
 export class HomePage {
-  private lang: String = 'en';
+  private lang: String;
   startDate: Date;
   endDate: Date;
-  constructor(private events: Events, private calendar: Calendar, private toast: Toast) {
+  constructor(private events: Events, private calendar: Calendar, private toast: Toast,private activatedRoute: ActivatedRoute) {
 
+  }
+  ngOnInit() {
+    this.lang = this.activatedRoute.snapshot.paramMap.get('lang');
+    console.log(this.lang);
   }
 langChange() {
   if (this.lang === 'en') {
@@ -24,17 +29,18 @@ langChange() {
   this.events.publish('lang:change', this.lang);
 }
 
+
 createEvent() {
-  this.startDate = new Date(2019, 1, 10, 18, 30, 0, 0);
-  this.endDate = new Date(2019, 1, 10, 22, 30, 0, 0);
+  this.startDate = new Date(2019, 10, 28, 18, 30, 0, 0);
+  this.endDate = new Date(2019, 10, 28, 22, 30, 0, 0);
   const calOptions = this.calendar.getCalendarOptions();
   calOptions.firstReminderMinutes = 2880;
   calOptions.secondReminderMinutes = 600;
-  this.calendar.findEvent('sasi weds Priya' , 'Ambattur ', 'wedding Reception', this.startDate, this.endDate)
+  this.calendar.findEvent('Gopi weds priyanka' , 'Karur ', 'wedding Reception', this.startDate, this.endDate)
   .then(
     (msg) => {
       if ( msg.length === 0 ) {
-    this.calendar.createEventWithOptions( 'sasi weds Priya' , 'Ambattur ', 'wedding Reception', this.startDate, this.endDate, calOptions)
+    this.calendar.createEventWithOptions( 'Gopi weds priyanka' , 'Karur ', 'wedding Reception', this.startDate, this.endDate, calOptions)
   .then(
     (success) => {
       this.toast.show('Calendar Event added successfully!', '10000', 'bottom').subscribe(

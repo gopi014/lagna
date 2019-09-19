@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar class="header">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home/{{lang}}"></ion-back-button>
+      </ion-buttons>
+      <ion-title>{{"invitation" | translate }}</ion-title>
+    </ion-toolbar>
+   </ion-header>
+
+<ion-content padding>
+  <div *ngIf="lang=='en'">
+      <ion-img src="assets/images/gopi_2.JPG" ></ion-img>
+  </div>
+   <div  *ngIf="lang=='ta'">
+      <ion-img src="assets/images/gopi.jpg" ></ion-img>
+   </div>
+    
+</ion-content>

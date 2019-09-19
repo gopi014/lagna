@@ -75,13 +75,21 @@
     color : #fff;
     text-align: center;
     margin: 0;
-    font-style: italic;
+    font-size: 24px;
+    font-family: mySecondFont;
 }
 .para2{
     color : #fff;
     text-align: center;
     margin: 5px;
-    font-style: italic;
+    font-family: mySecondFont;
+    font-size: 22px;
+}
+
+.para3{
+    color : #fff;
+    text-align: center;
+    margin: 5px;
 }
 .imageTwo{
     height:41px; margin : auto;left:50%
@@ -89,10 +97,18 @@
 .imageOne{
     height:92px; margin : auto
 }
-
+.label-text{
+    color : #fff;
+}
+.radio-hidden{
+    --color-checked:#AF273F;
+}
 @font-face {
     font-family: myFirstFont;
-    src: url('../../assets/Fonts/freemonobold.ttf');
+    src: url('../../assets/Fonts/Congrats.ttf');
   }
-  
- 
+  @font-face {
+    font-family: mySecondFont;
+    src: url('../../assets/Fonts/QuickKissPersonalUse.ttf');
+  }
+

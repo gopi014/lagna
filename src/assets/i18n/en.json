@@ -2,5 +2,18 @@
 "home":"Home",
 "about": "About",
 "contact": "Contact",
-"welcome":"Welcome to ionic"
+"welcome_name":"Gopi & Priyanka",
+"welcome_event":"Invites you to the Extravagenza",
+"welcome_date":"28 & 29 Nov 2019",
+"direction":"Get Directions",
+"live":"Live Stream",
+"invitation":"Invitation",
+"rsvp":"RSVP",
+"marriagehall":"Marriage Hall",
+"navigate":"Drive Me Here",
+"address1":"Prem Mahal Marriage Hall,",
+"address2":"Salem Bypass Road,",
+"address3": "Karur,",
+"address4": "Tamil Nadu 639006.",
+"stay":"Accomdation"
 }

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/{{lang}}"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{"direction" | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="bg-image">
+    <div class="layer">
+  <ion-list class="list">
+    <ion-item>
+      <div>
+      <ion-label class="title">{{"marriagehall" | translate}}</ion-label>
+      <p class='para1'>{{"address1" | translate }}</p>
+      <p class='para2'>{{"address2" | translate }}</p>
+      <p class='para2'>{{"address3" | translate }}</p>
+      <p class='para2'>{{"address4" | translate }}</p>
+      <button ion-button (click)="navigate()" class="navigate">{{"navigate" | translate}}
+          <ion-icon name="arrow-forward" class="icon"></ion-icon>
+      </button>
+    </div>
+    </ion-item>
+    <ion-item>
+        <div>
+        <ion-label class="title">{{"stay" | translate}}</ion-label>
+        <p class='para1'>{{"address1" | translate }}</p>
+        <p class='para2'>{{"address2" | translate }}</p>
+        <p class='para2'>{{"address3" | translate }}</p>
+        <p class='para2'>{{"address4" | translate }}</p>
+        <button ion-button (click)="navigatetohotel()" class="navigate">{{"navigate" | translate}}
+            <ion-icon name="arrow-forward" class="icon"></ion-icon>
+        </button>
+      </div>
+      </ion-item>
+  </ion-list>
+</div>
+</div>
+</ion-content>

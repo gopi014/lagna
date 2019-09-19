@@ -1,0 +1,12 @@
+{ "name": "Lagna",
+    "short_name": "Lagna",
+    "start_url": "index.html",
+    "display": "standalone",
+    "icons": [{
+    "src": "assets/icon/Wedding-ring-128.png",
+    "sizes": "512x512",
+    "type": "image/png"
+    }],
+    "background_color": "#FF9800",
+    "theme_color": "#FF9800"
+    }

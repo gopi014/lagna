@@ -6,7 +6,6 @@
 "welcome_event":"Invites you to the Extravagenza",
 "welcome_date":"28<sup>th</sup> & 29<sup>th</sup> Nov 2019",
 "direction":"Get Directions",
-"live":"Live Stream",
 "invitation":"Invitation",
 "rsvp":"RSVP",
 "marriagehall":"Marriage Hall",
@@ -15,5 +14,9 @@
 "address2":"Salem Bypass Road,",
 "address3": "Karur,",
 "address4": "Tamil Nadu 639006.",
-"stay":"Accomdation"
+"stay":"Accomdation",
+"groom":"Groom Side",
+"bride":"Bride Side",
+"friends":"Friends",
+"family":"Family"
 }

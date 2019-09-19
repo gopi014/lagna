@@ -34,7 +34,7 @@
       </div>
       <button ion-button full class="buttonOne" (click)="createEvent()">{{"rsvp" | translate }}</button>
       <button ion-button full class="buttonTwo" expand="block" [routerLink]="['/invitation',lang]" routerDirection="forward">{{"invitation" | translate }}</button>
-      <button ion-button full class="buttonThree">{{"live" | translate }}</button>
+      <button ion-button full class="buttonThree" [routerLink]="['/contacts',lang]" routerDirection="forward">{{"contact" | translate }}</button>
       <button ion-button full class="buttonFour" [routerLink]="['/directions',lang]" routerDirection="forward">{{"direction" | translate }}</button>
     </div>
   </div>

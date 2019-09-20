@@ -17,15 +17,23 @@ export class DirectionsPage implements OnInit {
     console.log(this.lang);
   }
   navigate(){
-    let options: LaunchNavigatorOptions = {
-        start: this.start
-    };
+    if /* if we're on iOS, open in Apple Maps */
+    ((navigator.platform.indexOf("iPhone") != -1) ||
+     (navigator.platform.indexOf("iPad") != -1) ||
+     (navigator.platform.indexOf("iPod") != -1))
+    window.open("maps://maps.google.com/maps?daddr=Prem+Mahal+Marriage+Hall,+No+18+New+Byepass+Road,+Road,+Salem+Bypass+Road,+Vaiyapuri+Nagar,+Green+Lands,+Karur,+Tamil+Nadu+639006,+India");
+    else /* else use Google */
+    window.open("https://maps.google.com/maps?daddr=Prem+Mahal+Marriage+Hall,+No+18+New+Byepass+Road,+Road,+Salem+Bypass+Road,+Vaiyapuri+Nagar,+Green+Lands,+Karur,+Tamil+Nadu+639006,+India");
+}
+navigatetohotel(){
+  if /* if we're on iOS, open in Apple Maps */
+  ((navigator.platform.indexOf("iPhone") != -1) ||
+   (navigator.platform.indexOf("iPad") != -1) ||
+   (navigator.platform.indexOf("iPod") != -1))
+  window.open("maps://maps.google.com/maps?daddr=Prem+Mahal+Marriage+Hall,+No+18+New+Byepass+Road,+Road,+Salem+Bypass+Road,+Vaiyapuri+Nagar,+Green+Lands,+Karur,+Tamil+Nadu+639006,+India");
+  else /* else use Google */
+  window.open("https://maps.google.com/maps?daddr=Prem+Mahal+Marriage+Hall,+No+18+New+Byepass+Road,+Road,+Salem+Bypass+Road,+Vaiyapuri+Nagar,+Green+Lands,+Karur,+Tamil+Nadu+639006,+India");
 
-    this.launchNavigator.navigate(this.destination, options)
-        .then(
-            success => console.log('Launched navigator'),
-            error => console.log('Error launching navigator: ' + error)
-        );
 }
 
 }

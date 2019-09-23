@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./invitation.page.scss'],
 })
 export class InvitationPage implements OnInit {
- private lang:any;
+ public lang:any;
  private test:boolean=true;
   constructor(private activatedRoute: ActivatedRoute) { }
 
@@ -15,6 +15,6 @@ export class InvitationPage implements OnInit {
     console.log(this.lang);
   }
 
- 
+
 
 }

@@ -16,6 +16,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
  import { Calendar } from '@ionic-native/calendar/ngx';
  import { Toast } from '@ionic-native/toast/ngx';
  import { LaunchNavigator } from '@ionic-native/launch-navigator/ngx';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -27,7 +29,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
      useFactory: (setTranslateLoader),
      deps: [HttpClient]
    }
-  })],
+  }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [
     StatusBar,
     SplashScreen,

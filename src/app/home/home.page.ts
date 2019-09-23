@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class HomePage {
-  private lang: String;
+  public lang: String;
   startDate: Date;
   endDate: Date;
   constructor(private events: Events, private calendar: Calendar, private toast: Toast,private activatedRoute: ActivatedRoute) {
